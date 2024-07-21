@@ -1,6 +1,6 @@
 > [!TIP]
-> quickffmpeg-rs.py -> На српском | On Serbian
-> quickffmpeg-en.py -> На енглеском | On English
+> py-ffmpeg-rs.py -> На српском | On Serbian
+> py-ffmpeg-en.py -> На енглеском | On English
 
 ---
 
@@ -35,13 +35,13 @@
    ```
 4. Покрените апликацију:
    ```bash
-   python quickffmpeg-rs.py
+   python py-ffmpeg-rs.py
    ```
    
    Или
    
    ```bash
-   python quickffmpeg-en.py
+   python py-ffmpeg-en.py
    ```
 
 <br>
@@ -101,7 +101,7 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
 1. Make sure you have FFmpeg installed. You can download it from the [FFmpeg official site](https://ffmpeg.org/download.html).
 2. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/ffmpeg-gui.git
+   git clone https://github.com/your-username/py-ffmpeg.git
    ```
 3. Install the required Python libraries:
    ```bash
@@ -109,12 +109,12 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
    ```
 4. Run the application:
    ```bash
-   python quickffmpeg-en.py
+   python py-ffmpeg-en.py
    ```
    or
    
    ```bash
-   python qucikffmpeg-rs.py
+   python py-ffmpeg-rs.py
    ```
 
 <br>
