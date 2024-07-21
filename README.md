@@ -97,7 +97,7 @@
 
 #### README in English 🇬🇧
 
-# FFmpeg GUI Application 🎬
+# GUI Application for [FFmepg](https://github.com/FFmpeg/FFmpeg)🎬
 
 > [Читај на српском 🇷🇸](#readme-на-српском)
 
