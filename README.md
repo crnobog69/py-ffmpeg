@@ -8,7 +8,7 @@
 > [!WARNING]
 > Иконица тренутно не ради на Arch Linux
 > <br>
-> Icons doesn't work at the time on Arch Linux
+> Icon doesn't work at the time on Arch Linux
 
 ---
 
