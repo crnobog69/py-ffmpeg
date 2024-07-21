@@ -1,4 +1,4 @@
-<p>
+<p align="center">
   <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png" width="10%">
  ## PyFFmpeg
 </p>
