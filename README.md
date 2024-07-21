@@ -1,6 +1,6 @@
 <p>
   <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png" width="10%">
-  <a style="font-size: 30px;">PyFFmpeg</a>
+ ## PyFFmpeg
 </p>
 
 
