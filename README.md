@@ -31,7 +31,7 @@
 
 #### README на српском 🇷🇸
 
-# ГУИ апликација за [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🎬
+# Графички интерфејс за [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🎬
 
 > [Read in English 🇬🇧](#readme-in-english)
 
