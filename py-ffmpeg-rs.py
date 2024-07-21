@@ -2,13 +2,15 @@ import sys
 import os
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout,
                              QFileDialog, QLabel, QLineEdit, QComboBox, QProgressBar, QMessageBox, QTabWidget)
-from PyQt5.QtGui import QPalette, QColor
+from PyQt5.QtGui import QPalette, QColor, QIcon
 from PyQt5.QtCore import QProcess, Qt
+from PyQt5 import QtGui
 
 
 class FFmpegGUI(QWidget):
     def __init__(self):
         super().__init__()
+        self.setWindowIcon(QtGui.QIcon('ikonica.png'))
         self.process = None
         self.duration = 0
         self.input_file = ''
@@ -22,7 +24,7 @@ class FFmpegGUI(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle('FFmpeg GUI')
+        self.setWindowTitle('PyFFmpeg | Српски')
         self.resize(500, 300)
 
         self.setStyleSheet("""
