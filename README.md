@@ -1,4 +1,4 @@
-> [!TIP]
+> [!NOTE]
 > py-ffmpeg-rs.py => На српском | On Serbian
 > <br>
 > py-ffmpeg-en.py => На енглеском | On English
