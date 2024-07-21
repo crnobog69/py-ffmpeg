@@ -6,14 +6,14 @@
 <br>
 
 > [!IMPORTANT]
-> 1. +++++++
+> 1.
 > <br>
 > Иконица тренутно не ради на Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 > <br>
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 
 > [!IMPORTANT]
-> 3. +++++++
+> 2.
 > <br>
 > Тема је поквраена на Windows 11
 > <br>
