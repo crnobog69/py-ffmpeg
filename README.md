@@ -10,8 +10,9 @@
 > <br>
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 
-> [!MUDJA]
-> PICKA
+> [!WARNING]
+> Боје на Windows 11
+> Colors on Windows 11
 
 ---
 
