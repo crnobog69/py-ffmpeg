@@ -10,7 +10,7 @@
 
 ---
 
-## README на српском 🇷🇸
+#### README на српском 🇷🇸
 
 # ГУИ апликација за FFmpeg 🎬
 
@@ -33,7 +33,7 @@
 1. Уверите се да имате инсталиран FFmpeg. Можете га преузети са [FFmpeg званичне странице](https://ffmpeg.org/download.html).
 2. Клонирајте овај репозиторијум:
    ```bash
-   git clone https://github.com/your-username/ffmpeg-gui.git
+   git clone https://github.com/your-username/quickffmpeg.git
    ```
 3. Инсталирајте потребне Python библиотеке:
    ```bash
@@ -41,7 +41,13 @@
    ```
 4. Покрените апликацију:
    ```bash
-   python main.py
+   python quickffmpeg-rs.py
+   ```
+   
+   Или
+   
+   ```bash
+   python quickffmpeg-en.py
    ```
 
 <br>
@@ -78,7 +84,7 @@
 
 ---
 
-## README in English 🇬🇧
+#### README in English 🇬🇧
 
 # FFmpeg GUI Application 🎬
 
@@ -109,7 +115,12 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
    ```
 4. Run the application:
    ```bash
-   python main.py
+   python quickffmpeg-en.py
+   ```
+   or
+   
+   ```bash
+   python qucikffmpeg-rs.py
    ```
 
 <br>
