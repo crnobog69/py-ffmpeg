@@ -1,8 +1,8 @@
-> ### Напомена | Note
+### Напомена | Note
 
--  quickffmpeg-en.py > #### На српском | On Serbian
-
-- quickffmpeg-en.py > #### На енглеском | On English
+- quickffmpeg-en.py > На српском | On Serbian
+ 
+- quickffmpeg-en.py > На енглеском | On English
 
 ---
 
