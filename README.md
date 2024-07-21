@@ -3,6 +3,13 @@
 > <br>
 > py-ffmpeg-en.py => На енглеском | On English
 
+<br>
+
+> [!WARNING]
+> Иконица тренутно не ради на Arch Linux
+> <br>
+> Icons doesn't work at the time on Arch Linux
+
 ---
 
 #### README на српском 🇷🇸
