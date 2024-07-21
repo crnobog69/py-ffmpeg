@@ -52,7 +52,7 @@
 1. Уверите се да имате инсталиран FFmpeg. Можете га преузети са [FFmpeg званичне странице](https://ffmpeg.org/download.html).
 2. Клонирајте овај репозиторијум:
    ```bash
-   git clone https://github.com/crnobog69/quickffmpeg.git
+   git clone https://github.com/crnobog69/py-ffmpeg.git
    ```
 3. Инсталирајте потребне Python библиотеке:
    ```bash
