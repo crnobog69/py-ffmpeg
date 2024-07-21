@@ -28,7 +28,7 @@
 1. Уверите се да имате инсталиран FFmpeg. Можете га преузети са [FFmpeg званичне странице](https://ffmpeg.org/download.html).
 2. Клонирајте овај репозиторијум:
    ```bash
-   git clone https://github.com/your-username/quickffmpeg.git
+   git clone https://github.com/crnobog69/quickffmpeg.git
    ```
 3. Инсталирајте потребне Python библиотеке:
    ```bash
@@ -102,7 +102,7 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
 1. Make sure you have FFmpeg installed. You can download it from the [FFmpeg official site](https://ffmpeg.org/download.html).
 2. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/py-ffmpeg.git
+   git clone https://github.com/crnobog69/py-ffmpeg.git
    ```
 3. Install the required Python libraries:
    ```bash
