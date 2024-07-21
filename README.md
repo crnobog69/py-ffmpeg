@@ -1,6 +1,6 @@
 <div style="display: flex; align-items: center;">
   <div style="flex: 0 0 auto;">
-    <img src="(https://github.com/crnobog69/py-ffmpeg/blob/main/ikonica.png)" alt="слика" style="max-width: 300px; height: auto;">
+    <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png)" alt="слика" style="max-width: 300px; height: auto;">
   </div>
   <div style="flex: 1; text-align: left; padding-left: 10px;">
     PyFFmpeg
