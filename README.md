@@ -6,13 +6,13 @@
 <br>
 
 > [!IMPORTANT]
-> 1.
+> 1. _______
 > <br>
 > Иконица тренутно не ради на Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 > <br>
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 > <br>
-> 2.
+> 2. _______
 > <br>
 > Боје на Windows 11
 > <br>
