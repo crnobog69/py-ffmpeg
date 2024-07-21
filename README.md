@@ -1,6 +1,11 @@
-![слика](https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png) 
-
-PyFFmpeg
+<div style="display: flex; align-items: center;">
+  <div style="flex: 0 0 auto; margin-right: 10px;">
+    <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png" alt="слика" style="max-width: 300px; height: auto;">
+  </div>
+  <div style="flex: 1; text-align: left;">
+    PyFFmpeg
+  </div>
+</div>
 
 
 
