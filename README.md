@@ -55,7 +55,7 @@
    python py-ffmpeg-rs.py
    ```
    
-   Или
+   или
    
    ```bash
    python py-ffmpeg-en.py
