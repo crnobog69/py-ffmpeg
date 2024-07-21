@@ -1,5 +1,5 @@
 <p>
-  <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png" width="10%">
+  <img src="https://raw.githubusercontent.com/crnobog69/crnobog69.github.io/main/Oznake/slika.jpg" width="10%">
 </p>
 
 ## PyFFmpeg
