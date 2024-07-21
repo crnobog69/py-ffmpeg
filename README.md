@@ -1,6 +1,6 @@
 > [!TIP]
 > py-ffmpeg-rs.py => На српском | On Serbian
-> <hr>
+> ---
 > py-ffmpeg-en.py => На енглеском | On English
 
 <br>
