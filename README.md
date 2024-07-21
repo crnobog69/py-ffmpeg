@@ -15,7 +15,7 @@
 > [!IMPORTANT]
 > 2.
 > <br>
-> Тема је поквраена на Windows 11
+> Тема је покварена на Windows 11
 > <br>
 > Theme is broken on Windows 11
 
