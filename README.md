@@ -1,7 +1,7 @@
 <p>
   <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/ikonica.png" width="10%">
 </p>
- <span style="font-size: 30px;">PyFFmpeg</span>
+ ## PyFFmpeg
 
 
 
