@@ -6,9 +6,9 @@
 <br>
 
 > [!WARNING]
-> Иконица тренутно не ради на Arch Linux
+> Иконица тренутно не ради на Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 > <br>
-> Icon doesn't work at the time on Arch Linux
+> Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 
 ---
 
