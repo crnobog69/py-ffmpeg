@@ -2,11 +2,11 @@
 
 ### На српском | On Serbian
 
-### quickffmpeg-en.py
+-  quickffmpeg-en.py
 
-### на енглеском | On English
+### На енглеском | On English
 
-quickffmpeg-en.py
+- quickffmpeg-en.py
 
 ---
 
