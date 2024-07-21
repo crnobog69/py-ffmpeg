@@ -11,12 +11,13 @@
 > Иконица тренутно не ради на Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 > <br>
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
+
+> [!IMPORTANT]
+> 3. +++++++
 > <br>
-> 2. +++++++
+> Тема је поквраена на Windows 11
 > <br>
-> Боје на Windows 11
-> <br>
-> Colors on Windows 11
+> Theme is broken on Windows 11
 
 ---
 
