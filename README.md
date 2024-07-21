@@ -1,10 +1,12 @@
 ### Напомена | Note
 
+<hr>
+
 #### На српском | On Serbian
 
 -  quickffmpeg-en.py
 
-### На енглеском | On English
+#### На енглеском | On English
 
 - quickffmpeg-en.py
 
