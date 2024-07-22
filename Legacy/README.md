@@ -6,10 +6,10 @@
 # v0.0.0.1
 > [!CAUTION]
 > <br>
-> ОВА ВЕРЗИЈА НЕЋЕ ДОБИЈАТИ АЖУРИРАЊА
+> **ОВА ВЕРЗИЈА НЕЋЕ ДОБИЈАТИ АЖУРИРАЊА***
 > <br>
 > <br>
-> THIS VERSION WILL NOT RECIEVE ANY MORE UPDATES
+> **THIS VERSION WILL NOT RECIEVE ANY MORE UPDATES**
 ---
 
 > [!CAUTION]
