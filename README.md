@@ -22,7 +22,14 @@
 > Када користите **py-ffmpeg.py** и скрипта није смештена у истом директоријуму као и преводи, преводи ће бити само на енглеском језику.
 > <br>
 > <br>
-> When using py-ffmpeg.py and the script is not located in the same directory as the translations, the translations will only be in English.
+> When using **py-ffmpeg.py** and the script is not located in the same directory as the translations, the translations will only be in English.
+
+> [!NOTE]
+> <br>
+> Ако желите да користите специфичан превод и да он буде као самостална скрипта онда користите [Legacy верзију](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).
+> <br>
+> <br>
+> If you want to use a specific translation and have it as a standalone script, use the [Legacy version](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).
 
 
 ---
