@@ -15,6 +15,8 @@
 | prevod_ru_RU.qm    |    Рускки језик          |    Russian language   |
 | prevod_ja_JP.qm    |    Јапанском језик       |    Japanese language  |
 
+<hr>
+
 > [!CAUTION]
 > Када користите py-ffmpeg.py и скрипта није смештена у истом директоријуму као и преводи, преводи ће бити само на енглеском језику.
 > <br>
