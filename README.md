@@ -28,10 +28,10 @@
 
 > [!NOTE]
 > <br>
-> Ако желите да користите специфичан превод и да он буде као самостална скрипта онда користите **[Legacy верзију](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).**
+> Ако желите да користите специфичан превод и да он буде као самостална скрипта онда користите **[Legacy верзију](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).** (v0.0.0.1)
 > <br>
 > <br>
-> If you want to use a specific translation and have it as a standalone script, use the **[Legacy version](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).**
+> If you want to use a specific translation and have it as a standalone script, use the **[Legacy version](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).** (v0.0.0.1)
 
 
 ---
