@@ -18,12 +18,8 @@
 > <br>
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 
-> [!IMPORTANT]
-> 2.
-> <br>
-> Тема је покварена на Windows 11
-> <br>
-> Theme is broken on Windows 11
+Тема инспирисана од стране [Catppuccin](https://github.com/catppuccin) палете боја.
+Theme inspired by [Catppuccin] color Palette.
 
 ---
 
