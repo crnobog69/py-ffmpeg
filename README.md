@@ -16,7 +16,7 @@
 | Фајл               | Језик (Српски)          | Language (English)    |
 |--------------------|--------------------------|-----------------------|
 | prevod_sr_RS.qm    |    Српски језик          |    Serbian language   |
-| prevod_en_US.qm    |    Енглеском језик       |    English language   |
+| prevod_en_US.qm    |    Енглески језик        |    English language   |
 | prevod_ru_RU.qm    |    Рускки језик          |    Russian language   |
 | prevod_ja_JP.qm    |    Јапанском језик       |    Japanese language  |
 
