@@ -6,37 +6,14 @@
 
 
 > [!CAUTION]
-> **Језик \\|/ Language**
-> <br>
-> **PyFFmpeg** би требао да се прилагоди језику оперативног система. Језик оже ручно бити промењен у апликацији.
-> <br>
-> <br>
-> **PyFFmpeg** should adapt to the language of the operating system. Language can be changed manually in the application. 
+> Језик \\|/ Language
 
 | Фајл               | Језик (Српски)          | Language (English)    |
 |--------------------|--------------------------|-----------------------|
-| prevod_sr_RS.qm    |    Српски језик          |    Serbian language   |
-| prevod_en_US.qm    |    Енглески језик        |    English language   |
-| prevod_ru_RU.qm    |    Рускки језик          |    Russian language   |
-| prevod_ja_JP.qm    |    Јапанском језик       |    Japanese language  |
-
-<hr>
-
-> [!CAUTION]
-> <br>
-> Када користите **py-ffmpeg.py** и скрипта није **смештена у истом директоријуму као и преводи**, **једини** језик ће бити на **енглески** језик. (до не ставим да српоски буде главни)
-> <br>
-> <br>
-> When using **py-ffmpeg.py** and the script is **not located in the same directory as the translations**, the **only** translation will be **English**. (until i change the default language to Serbian)
-
----
-
-> [!NOTE]
-> <br>
-> Ако желите да користите специфичан превод и да он буде као самостална скрипта онда користите **[Legacy верзију](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).** (v0.0.0.1)
-> <br>
-> <br>
-> If you want to use a specific translation and have it as a standalone script, use the **[Legacy version](https://github.com/crnobog69/py-ffmpeg/releases/tag/v0.0.0.1).** (v0.0.0.1)
+| prevod_sr_RS.qm    | На српском језику        | In Serbian language   |
+| prevod_en_US.qm    | На енглеском језику      | In English language   |
+| prevod_ru_RU.qm  | На руском језику         | In Russian language   |
+| prevod_ja_JP.qm    | На јапанском језику      | In Japanese language  |
 
 
 ---
@@ -47,9 +24,7 @@
 > [!IMPORTANT]
 > 1.
 > <br>
-> <br>
 > Иконица тренутно не ради на Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
-> <br>
 > <br>
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 
@@ -64,7 +39,7 @@
 
 #### README на српском 🇷🇸
 
-# Графички интерфејс за [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🎬 (Linux|Windows)
+# Графички интерфејс за [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🎬
 
 > [Read in English 🇬🇧](#readme-in-english)
 
@@ -102,7 +77,7 @@
 
 - Избор улазних и излазних datoteka 🎥🎵
 - Избор формата (видео, аудио, слике) 📂
-- Трака напретка за праћење напредовања преображавања ⏳
+- Прогрес бар за праћење напредовања преображавања ⏳
 - Упозорења за неслагање формата ⚠️
 - Прилагођени изглед са темом 🌌
 
@@ -132,7 +107,7 @@
 
 #### README in English 🇬🇧
 
-# GUI Application for [FFmepg](https://github.com/FFmpeg/FFmpeg)🎬 (Linux|Windows)
+# GUI Application for [FFmepg](https://github.com/FFmpeg/FFmpeg)🎬
 
 > [Читај на српском 🇷🇸](#readme-на-српском)
 

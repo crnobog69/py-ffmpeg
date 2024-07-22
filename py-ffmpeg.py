@@ -23,7 +23,9 @@ class FFmpegGUI(QWidget):
             'Image': ['jpg', 'png', 'gif', 'bmp', 'tiff', 'webp'],
             'Other': ['swf', 'raw']
         }
+        self.language_file = 'settings.txt'
         self.initUI()
+        self.loadLanguageSetting()
 
     def initUI(self):
         self.setWindowTitle(self.tr('PyFFmpeg | English'))
@@ -286,7 +288,7 @@ class FFmpegGUI(QWidget):
             elif language == 'Japanese':
                 locale_code = 'ja_JP'
 
-
+            self.saveLanguageSetting(locale_code)
             self.translator.load(f'prevod_{locale_code}.qm')
             QApplication.instance().installTranslator(self.translator)
             self.retranslateUi()
@@ -302,14 +304,21 @@ class FFmpegGUI(QWidget):
         self.status_label.setText(self.tr('Ready'))
         self.language_button.setText(self.tr('Change Language'))
 
+    def saveLanguageSetting(self, locale_code):
+        with open(self.language_file, 'w') as file:
+            file.write(locale_code)
+
+    def loadLanguageSetting(self):
+        if os.path.exists(self.language_file):
+            with open(self.language_file, 'r') as file:
+                locale_code = file.read().strip()
+                self.translator.load(f'prevod_{locale_code}.qm')
+                QApplication.instance().installTranslator(self.translator)
+                self.retranslateUi()
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    # Loading translation
-    translator = QTranslator()
-    locale_code = QLocale.system().name()
-    translator.load(f'prevod_{locale_code}.qm')
-    app.installTranslator(translator)
-
+    # Create the GUI and load the saved language setting
     ex = FFmpegGUI()
     sys.exit(app.exec_())
