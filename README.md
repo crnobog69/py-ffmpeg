@@ -12,6 +12,8 @@
 |--------------------|--------------------------|-----------------------|
 | py-ffmpeg-rs.py    | На српском језику        | In Serbian language   |
 | py-ffmpeg-en.py    | На енглеском језику      | In English language   |
+| py-ffmpeg-en.py    | На руском језику         | In Russian language   |
+| py-ffmpeg-jp.py    | На јапанском језику      | In Japanese language  |
 
 
 ---
