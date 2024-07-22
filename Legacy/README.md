@@ -4,6 +4,12 @@
 
 ---
 # v0.0.0.1
+> [!CAUTION]
+> <br>
+> ОВА ВЕРЗИЈА НЕЋЕ ДОБИЈАТИ АЖУРИРАЊА
+> <br>
+> <br>
+> THIS VERSION WILL NOT RECIEVE ANY MORE UPDATES
 ---
 
 > [!CAUTION]
@@ -11,8 +17,10 @@
 
 | Фајл               | Језик (Српски)          | Language (English)    |
 |--------------------|--------------------------|-----------------------|
-| py-ffmpeg-rs.py    | На српском језику        | In Serbian language   |
-| py-ffmpeg-en.py    | На енглеском језику      | In English language   |
+| py-ffmpeg-rs.py    |    Српском језик         | In Serbian language   |
+| py-ffmpeg-en.py    |    Енглески језик        | In English language   |
+| py-ffmpeg-ru.py    |    Руски језик           | In Russian language   |
+| py-ffmpeg-jp.py    |    Јапански језик        | In English language   |
 
 
 ---
