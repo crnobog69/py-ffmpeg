@@ -23,9 +23,6 @@
 > <br>
 > <br>
 > When using **py-ffmpeg.py** and the script is not located in the same directory as the translations, the translations will only be in English.
-> <br>
-> <br>
-> Linux|Windows
 
 ---
 
@@ -62,7 +59,7 @@
 
 #### README на српском 🇷🇸
 
-# Графички интерфејс за [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🎬
+# Графички интерфејс за [FFmpeg](https://github.com/FFmpeg/FFmpeg) 🎬 (Linux|Windows)
 
 > [Read in English 🇬🇧](#readme-in-english)
 
@@ -130,7 +127,7 @@
 
 #### README in English 🇬🇧
 
-# GUI Application for [FFmepg](https://github.com/FFmpeg/FFmpeg)🎬
+# GUI Application for [FFmepg](https://github.com/FFmpeg/FFmpeg)🎬 (Linux|Windows)
 
 > [Читај на српском 🇷🇸](#readme-на-српском)
 
