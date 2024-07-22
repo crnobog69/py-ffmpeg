@@ -19,7 +19,8 @@
 > Icon doesn't work at the time on Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 
 Тема инспирисана од стране [Catppuccin](https://github.com/catppuccin) палете боја.
-Theme inspired by [Catppuccin] color Palette.
+<br>
+Theme inspired by [Catppuccin](https://github.com/catppuccin) color Palette.
 
 ---
 
