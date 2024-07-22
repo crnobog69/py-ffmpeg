@@ -4,10 +4,11 @@
 
 ---
 
-> [!CAUTION]
-> py-ffmpeg-rs.py => На српском | On Serbian
-> <br>
-> py-ffmpeg-en.py => На енглеском | On English
+| Фајл               | Језик                   |
+|--------------------|--------------------------|
+| py-ffmpeg-rs.py    | На српском језику        |
+| py-ffmpeg-en.py    | На енглеском језику      |
+
 
 <br>
 
