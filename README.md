@@ -20,8 +20,6 @@
 > [!CAUTION]
 > Када користите py-ffmpeg.py и скрипта није смештена у истом директоријуму као и преводи, преводи ће бити само на енглеском језику.
 > <br>
-> <hr>
-> <br>
 > When using py-ffmpeg.py and the script is not located in the same directory as the translations, the translations will only be in English.
 
 
