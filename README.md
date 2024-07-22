@@ -31,6 +31,7 @@
 > [!IMPORTANT]
 > 1.
 > <br>
+> <br>
 > Иконица тренутно не ради на Arch Linux (EndeavourOS/KDE Plasma 6.1/ Wayland)
 > <br>
 > <br>
