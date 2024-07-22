@@ -68,13 +68,7 @@
    ```
 4. Покрените апликацију:
    ```bash
-   python py-ffmpeg-rs.py
-   ```
-   
-   или
-   
-   ```bash
-   python py-ffmpeg-en.py
+   python py-ffmpeg.py
    ```
 
 <br>
@@ -142,12 +136,7 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
    ```
 4. Run the application:
    ```bash
-   python py-ffmpeg-en.py
-   ```
-   or
-   
-   ```bash
-   python py-ffmpeg-rs.py
+   python py-ffmpeg.py
    ```
 
 <br>
