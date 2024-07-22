@@ -8,10 +8,10 @@
 > [!CAUTION]
 > **Језик \\|/ Language**
 > <br>
-> **PyFFmpeg** би требао да се прилагоди језику оперативног система. Може ручно бити промењен у апликацији.
+> **PyFFmpeg** би требао да се прилагоди језику оперативног система. Језик оже ручно бити промењен у апликацији.
 > <br>
 > <br>
-> **PyFFmpeg** should adapt to language of the operating system. Can be changed manually in the application. 
+> **PyFFmpeg** should adapt to language of the operating system. Language can be changed manually in the application. 
 
 | Фајл               | Језик (Српски)          | Language (English)    |
 |--------------------|--------------------------|-----------------------|
