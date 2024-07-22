@@ -27,48 +27,67 @@ class FFmpegGUI(QWidget):
         self.setWindowTitle('PyFFmpeg | Српски')
         self.resize(500, 300)
 
+
         self.setStyleSheet("""
-            QWidget {
-                background-color: #1E1E2E;
-                color: #F5E0DC;
-            }
-            QPushButton {
-                background-color: #1E1E2E;
-                color: #F38BA8;
-                border: 1px solid #F38BA8;
-                padding: 5px;
-            }
-            QPushButton:hover {
-                background-color: #F38BA8;
-                color: #1E1E2E;
-            }
-            QLineEdit {
-                background-color: #1E1E2E;
-                color: #F5E0DC;
-                border: 1px solid #F38BA8;
-                padding: 5px;
-            }
-            QLabel {
-                color: #F38BA8;
-            }
-            QComboBox {
-                background-color: #181825;
-                color: #cdd6f4;
-                border: 1px solid #f38ba8;
-            }
-            QProgressBar {
-                background-color: #1E1E2E;
-                color: #F38BA8;
-                border: 1px solid #F38BA8;
-            }
-            QProgressBar::chunk {
-                background-color: #F38BA8;
-            }
-            QMessageBox {
-                background-color: #1E1E2E;
-                color: #F5E0DC;
-            }
-        """)
+                    QWidget {
+                        background-color: #1E1E2E;
+                        color: #F5E0DC;
+                    }
+                    QPushButton {
+                        background-color: #1E1E2E;
+                        color: #F38BA8;
+                        border: 1px solid #F38BA8;
+                        padding: 5px;
+                    }
+                    QPushButton:hover {
+                        background-color: #F38BA8;
+                        color: #1E1E2E;
+                    }
+                    QLineEdit {
+                        background-color: #1E1E2E;
+                        color: #F5E0DC;
+                        border: 1px solid #F38BA8;
+                        padding: 5px;
+                    }
+                    QLabel {
+                        color: #F38BA8;
+                    }
+                    QComboBox {
+                        background-color: #181825;
+                        color: #cdd6f4;
+                        border: 1px solid #f38ba8;
+                    }
+                    QProgressBar {
+                        background-color: #1E1E2E;
+                        color: #F38BA8;
+                        border: 1px solid #F38BA8;
+                    }
+                    QProgressBar::chunk {
+                        background-color: #F38BA8;
+                    }
+                    QMessageBox {
+                        background-color: #1E1E2E;
+                        color: #F5E0DC;
+                    }
+                    QTabWidget::pane {
+                        border: 1px solid #F38BA8;
+                        background-color: #1E1E2E;
+                    }
+                    QTabWidget::tab-bar {
+                        left: 5px;
+                    }
+                    QTabBar::tab {
+                        background-color: #181825;
+                        color: #F5E0DC;
+                        border: 1px solid #F38BA8;
+                        padding: 5px;
+                        margin-right: 2px;
+                    }
+                    QTabBar::tab:selected, QTabBar::tab:hover {
+                        background-color: #F38BA8;
+                        color: #1E1E2E;
+                    }
+                """)
 
         layout = QVBoxLayout()
 
