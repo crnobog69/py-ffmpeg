@@ -13,17 +13,17 @@
 > [!CAUTION]
 > Језик \\|/ Language
 
-| Фајл               |Језик (Српски)           | Language (English)    |
+| Фајл               | Језик (Српски)           | Language (English)    |
 |--------------------|--------------------------|-----------------------|
-|       rs.qm        |    Српски језик          |    Serbian language   |
-|       en.qm        |    Енглески језик        |    English language   |
-|       ru.qm        |    Руски језикк          |    Russian language   |
-|       jp.qm        |    Јапански језик        |    Japanese language  |
-|       es.qm        |    Шпански језик         |    Spanish language   |
-|       fr.qm        |    Француски језик       |    French language    |
-|       de.qm        |    Немачки језик         |    German language    |
-|       it.qm        |    Италијански језик     |    Italian language   |
-|       kz.qm        |    Казашки језик         |    Kazah language     |
+|       rs.qm        |     Српски језик          |    Serbian language   |
+|       en.qm        |     Енглески језик        |    English language   |
+|       ru.qm        |     Руски језикк          |    Russian language   |
+|       jp.qm        |     Јапански језик        |    Japanese language  |
+|       es.qm        |     Шпански језик         |    Spanish language   |
+|       fr.qm        |     Француски језик       |    French language    |
+|       de.qm        |     Немачки језик         |    German language    |
+|       it.qm        |     Италијански језик     |    Italian language   |
+|       kz.qm        |     Казашки језик         |    Kazah language     |
 
 
 ---
