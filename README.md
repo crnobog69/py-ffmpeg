@@ -20,7 +20,7 @@
 |       ru.qm        |    Руски језикк          |    Russian language   |
 |       jp.qm        |    Јапански језик        |    Japanese language  |
 |       es.qm        |    Шпански језик         |    Spanish language   |
-|       fr.qm        |    Француски језик       |    French language    | - not added yet
+|       fr.qm        |    Француски језик       |    French language (not added yet)   |
 
 
 ---
