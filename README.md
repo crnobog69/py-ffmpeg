@@ -13,7 +13,7 @@
 > [!CAUTION]
 > Језик \\|/ Language
 
-| Фајл               | Језик (Српски)          | Language (English)    |
+| Фајл               | Језик (Српски)           | Language (English)    |
 |--------------------|--------------------------|-----------------------|
 |       rs.qm        |    Српски језик          |    Serbian language   |
 |       en.qm        |    Енглески језик        |    English language   |
