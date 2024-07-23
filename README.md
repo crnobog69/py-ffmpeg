@@ -15,10 +15,12 @@
 
 | Фајл               | Језик (Српски)          | Language (English)    |
 |--------------------|--------------------------|-----------------------|
-| prevod_sr_RS.qm    | На српском језику        | In Serbian language   |
-| prevod_en_US.qm    | На енглеском језику      | In English language   |
-| prevod_ru_RU.qm  | На руском језику         | In Russian language   |
-| prevod_ja_JP.qm    | На јапанском језику      | In Japanese language  |
+|       rs.qm        |    Српски језик          |    Serbian language   |
+|       en.qm        |    Енглески језик        |    English language   |
+|       ru.qm        |    Руски језикк          |    Russian language   |
+|       jp.qm        |    Јапански језик        |    Japanese language  |
+|       es.qm        |    Шпански језик         |    Spanish language   |
+|       fr.qm        |    Француски језик       |    French language    | - not added yet
 
 
 ---
