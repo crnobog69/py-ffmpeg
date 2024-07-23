@@ -21,6 +21,8 @@
 |       jp.qm        |    Јапански језик        |    Japanese language  |
 |       es.qm        |    Шпански језик         |    Spanish language   |
 |       fr.qm        |    Француски језик       |    French language (not added yet)   |
+|       de.qm        |    Немачки језик         |    German language (not added yet)   |
+|       it.qm        |    Италијански језик     |    Italian language (not added yet)   |
 
 
 ---
