@@ -2,6 +2,9 @@
   <img src="https://raw.githubusercontent.com/crnobog69/py-ffmpeg/main/%D0%A0%D0%B5%D1%81%D1%83%D1%80%D1%81%D0%B8/PyFFmpeg.png" width="70%">
 </p>
 
+<br>
+Ово је **једноставан** графички интерфејс за FFmpeg написан у Python-у са PyQt5.
+This is **a simple gui** for FFmpeg written in Pyhton with PyQt5.
 ---
 
 > [!CAUTION]
