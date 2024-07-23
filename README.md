@@ -3,9 +3,9 @@
 </p>
 
 <br>
-Ово је **једноставан** графички интерфејс за FFmpeg написан у Python-у са PyQt5.
+Ово је једноставан графички интерфејс за FFmpeg написан у Python-у са PyQt5.
 <br>
-This is **a simple gui** for FFmpeg written in Pyhton with PyQt5.
+This is a simple gui for FFmpeg written in Pyhton with PyQt5.
 ---
 
 > [!CAUTION]
