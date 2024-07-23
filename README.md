@@ -6,8 +6,6 @@
 
 Ово је **једноставан** графички интерфејс за FFmpeg написан у Python-у са PyQt5.
 
-<br>
-
 This is **a simple** GUI for FFmpeg written in Pyhton with PyQt5.
 
 ---
