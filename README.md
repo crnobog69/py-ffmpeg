@@ -90,6 +90,7 @@
 - Прогрес бар за праћење напредовања преображавања ⏳
 - Упозорења за неслагање формата ⚠️
 - Прилагођени изглед са темом 🌌
+- 9 Језика 🌍
 
 <br>
 
@@ -158,6 +159,7 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
 - Progress bar to track conversion progress ⏳
 - Format mismatch warnings ⚠️
 - Custom appearance with a theme 🌌
+- 9 Languages 🌍
 
 <br>
 
