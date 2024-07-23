@@ -11,23 +11,6 @@
 ---
 
 > [!CAUTION]
-> <br>
- ```bash
-Traceback (most recent call last):
-  File "/home/krematorijum/Desktop/py-ffmpeg.py", line 254, in updateProgress
-    self.duration = int(duration_parts[0]) * 3600 + int(duration_parts[1]) * 60 + float(duration_parts[2])
-                    ^^^^^^^^^^^^^^^^^^^^^^
-ValueError: invalid literal for int() with base 10: 'N/A'
-[1]    3453 IOT instruction (core dumped)  python py-ffmpeg.py
-```
-
-
-<br>
-<br>
-<br>
-
-
-> [!CAUTION]
 > Језик \\|/ Language
 
 | Фајл               | Језик (Српски)          | Language (English)    |
