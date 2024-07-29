@@ -76,7 +76,11 @@
    ```bash
    pip install pyqt5
    ```
-4. Покрените апликацију:
+   или
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Покрените апликацију:
    ```bash
    python py-ffmpeg.py
    ```
@@ -145,7 +149,11 @@ Welcome to the repository for the FFmpeg GUI application! This app allows you to
    ```bash
    pip install pyqt5
    ```
-4. Run the application:
+   or
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Run the application:
    ```bash
    python py-ffmpeg.py
    ```
