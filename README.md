@@ -27,10 +27,10 @@
 
 ## Слике 🖼️ | Images 🖼️
 
-- **Почетak** 🏠 | **Home** 🏠
+- **Програм** 🖥️ | **Program** 🖥️
 ![image](https://github.com/user-attachments/assets/cd03428e-b956-4c62-90a0-74538beaee13)
 
-- **О програму** 🖥️ | **About** 🖥️
+- **О програму** [ℹ️] | **About** [ℹ️]
 
 ![image](https://github.com/user-attachments/assets/03d7e563-256c-4ecf-bc46-bbba48bb2e40)
 
