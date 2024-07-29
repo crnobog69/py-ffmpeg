@@ -25,6 +25,15 @@
 |       it.qm        |     Италијански језик    |    Italian language   |
 |       kz.qm        |     Казашки језик        |    Kazah language     |
 
+## Слике 🖼️ | Images 🖼️
+
+- Почетна страница 🏠 | Homepage 🏠 
+![image](https://github.com/user-attachments/assets/cd03428e-b956-4c62-90a0-74538beaee13)
+
+- О програму 🖥️ | About 🖥️
+
+![image](https://github.com/user-attachments/assets/03d7e563-256c-4ecf-bc46-bbba48bb2e40)
+
 
 ---
 
