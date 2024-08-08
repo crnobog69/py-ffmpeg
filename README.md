@@ -13,6 +13,7 @@
 
 > [!CAUTION]
 > Python 3.12
+> <br>
 > Језик \\|/ Language
 
 | Фајл               | Језик (Српски)           | Language (English)    |
