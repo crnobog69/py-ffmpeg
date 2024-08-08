@@ -8,11 +8,11 @@
 
 **A simple** GUI for FFmpeg written in Pyhton with PyQt5.
 
-Python 3.12
 
 ---
 
 > [!CAUTION]
+> Python 3.12
 > Језик \\|/ Language
 
 | Фајл               | Језик (Српски)           | Language (English)    |
