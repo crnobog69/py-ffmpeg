@@ -61,7 +61,7 @@
 - 😺 | [Catppuccin](https://github.com/catppuccin)
 - 🌹 | [Rosé Pine](https://github.com/rose-pine)
 - 🗼 | [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme)
-- 🧛 | [Дракула](https://github.com/dracula/)
+- 🧛 | [Dracula](https://github.com/dracula/)
 - ❄️ | [Nord](https://github.com/nordtheme)
 - 🟫 | [Gruvbox](https://github.com/morhetz/gruvbox)
 - ☯️ | [Solarized](https://github.com/altercation/solarized)
