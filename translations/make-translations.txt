@@ -1,0 +1,29 @@
+Прави датотеке за превођење
+Make translations files
+
+---
+
+pylupdate5 py-ffmpeg.py -ts translations/sr.ts
+pylupdate5 py-ffmpeg.py -ts translations/ja.ts
+pylupdate5 py-ffmpeg.py -ts translations/ru.ts
+pylupdate5 py-ffmpeg.py -ts translations/es.ts
+pylupdate5 py-ffmpeg.py -ts translations/en.ts
+pylupdate5 py-ffmpeg.py -ts translations/de.ts
+pylupdate5 py-ffmpeg.py -ts translations/it.ts
+pylupdate5 py-ffmpeg.py -ts translations/fr.ts
+pylupdate5 py-ffmpeg.py -ts translations/kz.ts
+
+---
+
+Избаци преведене датотеке
+Realease translation files
+
+lrelease translations/sr.ts -qm translations/sr.qm
+lrelease translations/ja.ts -qm translations/ja.qm
+lrelease translations/ru.ts -qm translations/ru.qm
+lrelease translations/es.ts -qm translations/es.qm
+lrelease translations/en.ts -qm translations/en.qm
+lrelease translations/de.ts -qm translations/de.qm
+lrelease translations/it.ts -qm translations/it.qm
+lrelease translations/fr.ts -qm translations/fr.qm
+lrelease translations/kz.ts -qm translations/kz.qm
