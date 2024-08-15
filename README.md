@@ -16,6 +16,7 @@
 > <br>
 > Језик \\|/ Language
 > Превео / Translated by : [crnobog69](https://github.com/crnobog69)
+> <br>
 > Неки преводи можда нису тачни / Some translations may not be correct
 
 | Фајл               | Језик (Српски)           | Language (English)    |
