@@ -31,7 +31,7 @@
 ## Слике 🖼️ | Images 🖼️
 
 - **Програм** 🖥️ | **Program** 🖥️
-![image](assets/slika.jpg)
+![image](assets/program.png)
 
 - **О програму** [ℹ️] | **About** [ℹ️]
 
