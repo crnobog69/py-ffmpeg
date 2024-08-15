@@ -10,6 +10,11 @@
 
 
 ---
+> [!NOTE]
+> Допринос \\|/ Contributing
+> <br>
+> [Овде | Here](contribute.md)
+
 
 > [!CAUTION]
 > Python 3.12
