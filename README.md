@@ -35,7 +35,7 @@
 
 - **О програму** [ℹ️] | **About** [ℹ️]
 
-![image](assets/o-porgramu.png)
+![image](assets/o-programu.png)
 
 
 ---
