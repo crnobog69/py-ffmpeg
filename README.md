@@ -56,10 +56,16 @@
 
 ---
 
-**Тема је инспирисана палетом боја из [Catppuccin](https://github.com/catppuccin).**
-<br>
-**Theme inspired by the color palette from [Catppuccin](https://github.com/catppuccin).**
+**🎨 Теме \\|/ Themes**
 
+- 😺 | [Catppuccin](https://github.com/catppuccin)
+- 😺 | [Rosé Pine](https://github.com/rose-pine)
+- 🗼 | [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme)
+- 🧛 | [Дракула](https://github.com/dracula/)
+- ❄️ | [Nord](https://github.com/nordtheme)
+- 🟫 | [Gruvbox](https://github.com/morhetz/gruvbox)
+- ☯️ | [Solarized](https://github.com/altercation/solarized)
+- 🌙 | [One Dark](https://github.com/9ssi7/zed-one-dark-pro-monokai-darker)
 
 ---
 
