@@ -35,7 +35,7 @@
 
 - **О програму** [ℹ️] | **About** [ℹ️]
 
-![image](https://github.com/user-attachments/assets/03d7e563-256c-4ecf-bc46-bbba48bb2e40)
+![image](assets/o-porgramu.png)
 
 
 ---
