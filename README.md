@@ -15,6 +15,7 @@
 > Python 3.12
 > <br>
 > Језик \\|/ Language
+> Превео / Translated by : [crnobog69 (ja/me)](https://github.com/crnobog69)
 
 | Фајл               | Језик (Српски)           | Language (English)    |
 |--------------------|--------------------------|-----------------------|
