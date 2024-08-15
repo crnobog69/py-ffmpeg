@@ -15,6 +15,7 @@
 > Python 3.12
 > <br>
 > Језик \\|/ Language
+> <br>
 > Превео / Translated by : [crnobog69](https://github.com/crnobog69)
 > <br>
 > Неки преводи можда нису тачни / Some translations may not be correct
