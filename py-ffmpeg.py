@@ -23,73 +23,14 @@ class FFmpegGUI(QWidget):
             'Other': ['swf', 'raw']
         }
         self.language_file = 'settings.txt'
+        self.theme_file = 'theme.txt'
         self.initUI()
         self.loadLanguageSetting()
+        self.loadThemeSetting()
 
     def initUI(self):
         self.setWindowTitle(self.tr('PyFFmpeg | English'))
         self.resize(500, 300)
-
-        self.setStyleSheet("""
-            QWidget {
-                background-color: #1E1E2E;
-                color: #F5E0DC;
-            }
-            QPushButton {
-                background-color: #1E1E2E;
-                color: #F38BA8;
-                border: 1px solid #F38BA8;
-                padding: 5px;
-            }
-            QPushButton:hover {
-                background-color: #F38BA8;
-                color: #1E1E2E;
-            }
-            QLineEdit {
-                background-color: #1E1E2E;
-                color: #F5E0DC;
-                border: 1px solid #F38BA8;
-                padding: 5px;
-            }
-            QLabel {
-                color: #F38BA8;
-            }
-            QComboBox {
-                background-color: #181825;
-                color: #cdd6f4;
-                border: 1px solid #f38ba8;
-            }
-            QProgressBar {
-                background-color: #1E1E2E;
-                color: #F38BA8;
-                border: 1px solid #F38BA8;
-            }
-            QProgressBar::chunk {
-                background-color: #F38BA8;
-            }
-            QMessageBox {
-                background-color: #1E1E2E;
-                color: #F5E0DC;
-            }
-            QTabWidget::pane {
-                border: 1px solid #F38BA8;
-                background-color: #1E1E2E;
-            }
-            QTabWidget::tab-bar {
-                left: 5px;
-            }
-            QTabBar::tab {
-                background-color: #181825;
-                color: #F5E0DC;
-                border: 1px solid #F38BA8;
-                padding: 5px;
-                margin-right: 2px;
-            }
-            QTabBar::tab:selected, QTabBar::tab:hover {
-                background-color: #F38BA8;
-                color: #1E1E2E;
-            }
-        """)
 
         layout = QVBoxLayout()
 
@@ -142,7 +83,7 @@ class FFmpegGUI(QWidget):
         self.status_label = QLabel(self.tr('Ready'), self)
         layout.addWidget(self.status_label)
 
-        # Language and About buttons layout
+        # Language, Theme, and About buttons layout
         button_layout = QHBoxLayout()
         self.about_button = QPushButton(self.tr('About'), self)
         self.about_button.clicked.connect(self.showAboutDialog)
@@ -150,8 +91,12 @@ class FFmpegGUI(QWidget):
         self.language_button = QPushButton(self.tr('Change Language'), self)
         self.language_button.clicked.connect(self.changeLanguage)
         self.language_button.setFixedHeight(30)  # Set height for the Change Language button
+        self.theme_button = QPushButton(self.tr('Theme'), self)
+        self.theme_button.clicked.connect(self.changeTheme)
+        self.theme_button.setFixedHeight(30)  # Set height for the Change Theme button
         button_layout.addWidget(self.about_button)
         button_layout.addWidget(self.language_button)
+        button_layout.addWidget(self.theme_button)
         layout.addLayout(button_layout)
 
         self.setLayout(layout)
@@ -262,17 +207,18 @@ class FFmpegGUI(QWidget):
 
     def parseCurrentTime(self, line):
         import re
-        match = re.search(r"time=(\d+):(\d+):(\d+)", line)
+        match = re.search(r"time=(\d+):(\d+):([\d.]+)", line)
         if match:
-            hours, minutes, seconds = map(int, match.groups())
+            hours = int(match.group(1))
+            minutes = int(match.group(2))
+            seconds = float(match.group(3))
             return hours * 3600 + minutes * 60 + seconds
-        return 0
+        return None
 
     def onConversionFinished(self):
-        self.status_label.setText(self.tr('Conversion completed!'))
+        self.status_label.setText(self.tr('Conversion finished.'))
         self.convert_button.setEnabled(True)
         self.progress_bar.setValue(100)
-        self.process = None
 
     def showAboutDialog(self):
         about_dialog = QDialog(self)
@@ -281,7 +227,7 @@ class FFmpegGUI(QWidget):
         about_layout = QVBoxLayout()
         about_label = QLabel(self.tr(
             '<h1>PyFFmpeg</h1>'
-            '<p>Version 0.0.0.4</p>'
+            '<p>Version 0.0.0.5</p>'
             '<p>A simple FFmpeg GUI built with PyQt5.</p>'
             '<p>Made by Црнобог | Crnobog</p>'
         ))
@@ -313,94 +259,607 @@ class FFmpegGUI(QWidget):
         about_dialog.exec_()
 
     def saveLanguageSetting(self, language):
-        with open(self.language_file, 'w') as file:
-            file.write(language)
+       with open(self.language_file, 'w') as file:
+           file.write(language)
 
     def loadLanguageSetting(self):
-        try:
-            with open(self.language_file, 'r') as file:
-                language = file.read().strip()
-                self.switchTranslator(language)
-        except FileNotFoundError:
-            self.switchTranslator('en')
+       try:
+           with open(self.language_file, 'r') as file:
+               language = file.read().strip()
+               self.switchTranslator(language)
+       except FileNotFoundError:
+           self.switchTranslator('en')
 
     def switchTranslator(self, language):
-        if language == 'en':
-            self.translator.load(QLibraryInfo.location(QLibraryInfo.TranslationsPath))
-        elif language == 'ja':
-            self.translator.load('translations/ja.qm')
-        elif language == 'sr':
-            self.translator.load('translations/sr.qm')
-        elif language == 'ru':
-            self.translator.load('translations/ru.qm')
-        elif language == 'es':
-            self.translator.load('translations/es.qm')
-        elif language == 'fr':
-            self.translator.load('translations/fr.qm')
-        elif language == 'de':
-            self.translator.load('translations/de.qm')
-        elif language == 'it':
-            self.translator.load('translations/it.qm')
-        elif language == 'kz':
-            self.translator.load('translations/kz.qm')
-        QApplication.instance().installTranslator(self.translator)
-        self.retranslateUi()
+       if language == 'en':
+           self.translator.load(QLibraryInfo.location(QLibraryInfo.TranslationsPath))
+       elif language == 'ja':
+           self.translator.load('translations/ja.qm')
+       elif language == 'sr':
+           self.translator.load('translations/sr.qm')
+       elif language == 'ru':
+           self.translator.load('translations/ru.qm')
+       elif language == 'es':
+           self.translator.load('translations/es.qm')
+       elif language == 'fr':
+           self.translator.load('translations/fr.qm')
+       elif language == 'de':
+           self.translator.load('translations/de.qm')
+       elif language == 'it':
+           self.translator.load('translations/it.qm')
+       elif language == 'kz':
+           self.translator.load('translations/kz.qm')
+       QApplication.instance().installTranslator(self.translator)
+       self.retranslateUi()
 
     def retranslateUi(self):
-        self.setWindowTitle(self.tr('PyFFmpeg | English'))
-        self.input_label.setText(self.tr('Select a file:'))
-        self.browse_input_button.setText(self.tr('Browse'))
-        self.output_label.setText(self.tr('Save converted file as:'))
-        self.browse_output_button.setText(self.tr('Browse'))
-        self.format_label.setText(self.tr('Select output format:'))
-        self.convert_button.setText(self.tr('Convert'))
-        self.status_label.setText(self.tr('Ready'))
-        self.about_button.setText(self.tr('About'))
-        self.language_button.setText(self.tr('Change Language'))
+       self.setWindowTitle(self.tr('PyFFmpeg | English'))
+       self.input_label.setText(self.tr('Select a file:'))
+       self.browse_input_button.setText(self.tr('Browse'))
+       self.output_label.setText(self.tr('Save converted file as:'))
+       self.browse_output_button.setText(self.tr('Browse'))
+       self.format_label.setText(self.tr('Select output format:'))
+       self.convert_button.setText(self.tr('Convert'))
+       self.status_label.setText(self.tr('Ready'))
+       self.about_button.setText(self.tr('About'))
+       self.language_button.setText(self.tr('Change Language'))
+       self.theme_button.setText(self.tr('Change Theme'))
 
-        # Update the format tab labels
-        tab_labels = {
-            'Video': self.tr('Video'),
-            'Audio': self.tr('Audio'),
-            'Image': self.tr('Image'),
-            'Other': self.tr('Other'),
-        }
-        for index in range(self.format_tab_widget.count()):
-            category = list(self.formats.keys())[index]
-            self.format_tab_widget.setTabText(index, tab_labels[category])
+       # Update the format tab labels
+       tab_labels = {
+           'Video': self.tr('Video'),
+           'Audio': self.tr('Audio'),
+           'Image': self.tr('Image'),
+           'Other': self.tr('Other'),
+       }
+       for index in range(self.format_tab_widget.count()):
+           category = list(self.formats.keys())[index]
+           self.format_tab_widget.setTabText(index, tab_labels[category])
 
     def changeLanguage(self):
-        languages = ['English (EN)', '日本語 (JP)', 'Српски (SR)', 'Русский (RU)', 'Español (ES)', 'Français (FR)', 'Deutsch (DE)', 'Italiano (IT)', 'Қазақша (KZ)']
-        current_language = 'English (EN)'
-        language, ok = QInputDialog.getItem(self, self.tr('Select Language'), self.tr('Language:'), languages, languages.index(current_language), False)
-        if ok and language:
-            if language == 'English (EN)':
-                self.saveLanguageSetting('en')
-                self.switchTranslator('en')
-            elif language == '日本語 (JP)':
-                self.saveLanguageSetting('ja')
-                self.switchTranslator('ja')
-            elif language == 'Српски (SR)':
-                self.saveLanguageSetting('sr')
-                self.switchTranslator('sr')
-            elif language == 'Русский (RU)':
-                self.saveLanguageSetting('ru')
-                self.switchTranslator('ru')
-            elif language == 'Español (ES)':
-                self.saveLanguageSetting('es')
-                self.switchTranslator('es')
-            elif language == 'Français (FR)':
-                self.saveLanguageSetting('fr')
-                self.switchTranslator('fr')
-            elif language == 'Deutsch (DE)':
-                self.saveLanguageSetting('de')
-                self.switchTranslator('de')
-            elif language == 'Italiano (IT)':
-                self.saveLanguageSetting('it')
-                self.switchTranslator('it')
-            elif language == 'Қазақша (KZ)':
-                self.saveLanguageSetting('kz')
-                self.switchTranslator('kz')
+       languages = ['Српски (SR)', '日本語 (JP)', 'English (EN)', 'Русский (RU)', 'Español (ES)', 'Français (FR)', 'Deutsch (DE)', 'Italiano (IT)', 'Қазақша (KZ)']
+       current_language = 'English (EN)'
+       language, ok = QInputDialog.getItem(self, self.tr('Select Language'), self.tr('Language:'), languages, languages.index(current_language), False)
+       if ok and language:
+           if language == 'Српски (SR)':
+               self.saveLanguageSetting('sr')
+               self.switchTranslator('sr')
+           elif language == '日本語 (JP)':
+               self.saveLanguageSetting('ja')
+               self.switchTranslator('ja')
+           elif language == 'English (EN)':
+               self.saveLanguageSetting('en')
+               self.switchTranslator('en')
+           elif language == 'Русский (RU)':
+               self.saveLanguageSetting('ru')
+               self.switchTranslator('ru')
+           elif language == 'Español (ES)':
+               self.saveLanguageSetting('es')
+               self.switchTranslator('es')
+           elif language == 'Français (FR)':
+               self.saveLanguageSetting('fr')
+               self.switchTranslator('fr')
+           elif language == 'Deutsch (DE)':
+               self.saveLanguageSetting('de')
+               self.switchTranslator('de')
+           elif language == 'Italiano (IT)':
+               self.saveLanguageSetting('it')
+               self.switchTranslator('it')
+           elif language == 'Қазақша (KZ)':
+               self.saveLanguageSetting('kz')
+               self.switchTranslator('kz')
+
+    def changeTheme(self):
+        themes = ['Catppuccin Mocha Red', 'Rose Pine', 'Tokyo Night', 'Dracula', 'Nord', 'Gruvbox', 'Solarized', 'One Dark']
+        current_theme = self.loadThemeSetting()
+        theme, ok = QInputDialog.getItem(self, self.tr('---'), self.tr('Theme:'), themes, themes.index(current_theme), False)
+        if ok and theme:
+            self.applyTheme(theme)
+            self.saveThemeSetting(theme)
+
+    def applyTheme(self, theme):
+        if theme == 'Catppuccin Mocha Red':
+            self.setStyleSheet("""
+                QWidget {
+                    background-color: #1E1E2E;
+                    color: #F5E0DC;
+                }
+                QPushButton {
+                    background-color: #1E1E2E;
+                    color: #F38BA8;
+                    border: 1px solid #F38BA8;
+                    padding: 5px;
+                }
+                QPushButton:hover {
+                    background-color: #F38BA8;
+                    color: #1E1E2E;
+                }
+                QLineEdit {
+                    background-color: #1E1E2E;
+                    color: #F5E0DC;
+                    border: 1px solid #F38BA8;
+                    padding: 5px;
+                }
+                QLabel {
+                    color: #F38BA8;
+                }
+                QComboBox {
+                    background-color: #181825;
+                    color: #cdd6f4;
+                    border: 1px solid #f38ba8;
+                }
+                QProgressBar {
+                    background-color: #1E1E2E;
+                    color: #F38BA8;
+                    border: 1px solid #F38BA8;
+                }
+                QProgressBar::chunk {
+                    background-color: #F38BA8;
+                }
+                QMessageBox {
+                    background-color: #1E1E2E;
+                    color: #F5E0DC;
+                }
+                QTabWidget::pane {
+                    border: 1px solid #F38BA8;
+                    background-color: #1E1E2E;
+                }
+                QTabWidget::tab-bar {
+                    left: 5px;
+                }
+                QTabBar::tab {
+                    background-color: #181825;
+                    color: #F5E0DC;
+                    border: 1px solid #F38BA8;
+                    padding: 5px;
+                    margin-right: 2px;
+                }
+                QTabBar::tab:selected, QTabBar::tab:hover {
+                    background-color: #F38BA8;
+                    color: #1E1E2E;
+                }
+            """)
+        elif theme == 'Rose Pine':
+            self.setStyleSheet("""
+                QWidget {
+                    background-color: #191724; /* Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                }
+                QPushButton {
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                    border: 1px solid #e0def4; /* Rose Pine foreground */
+                    padding: 5px;
+                }
+                QPushButton:hover {
+                    background-color: #eb6f92; /* Rose Pine highlight */
+                    color: #191724; /* Rose Pine background */
+                }
+                QLineEdit {
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                    border: 1px solid #e0def4; /* Rose Pine foreground */
+                    padding: 5px;
+                }
+                QLabel {
+                    color: #e0def4; /* Rose Pine foreground */
+                }
+                QComboBox {
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                    border: 1px solid #e0def4; /* Rose Pine foreground */
+                }
+                QProgressBar {
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                    border: 1px solid #e0def4; /* Rose Pine foreground */
+                }
+                QProgressBar::chunk {
+                    background-color: #9ccfd8; /* Rose Pine accent */
+                }
+                QMessageBox {
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                }
+                QTabWidget::pane {
+                    border: 1px solid #e0def4; /* Rose Pine foreground */
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                }
+                QTabWidget::tab-bar {
+                    left: 5px;
+                }
+                QTabBar::tab {
+                    background-color: #1f1d2e; /* Slightly lighter Rose Pine background */
+                    color: #e0def4; /* Rose Pine foreground */
+                    border: 1px solid #e0def4; /* Rose Pine foreground */
+                    padding: 5px;
+                    margin-right: 2px;
+                }
+                QTabBar::tab:selected, QTabBar::tab:hover {
+                    background-color: #eb6f92; /* Rose Pine highlight */
+                    color: #191724; /* Rose Pine background */
+                }
+            """)
+        elif theme == 'Tokyo Night':
+            self.setStyleSheet("""
+                QWidget {
+                    background-color: #1A1B26;
+                    color: #C0CAF5;
+                }
+                QPushButton {
+                    background-color: #292E42;
+                    color: #C0CAF5;
+                    border: 1px solid #C0CAF5;
+                    padding: 5px;
+                }
+                QPushButton:hover {
+                    background-color: #C0CAF5;
+                    color: #292E42;
+                }
+                QLineEdit {
+                    background-color: #292E42;
+                    color: #C0CAF5;
+                    border: 1px solid #C0CAF5;
+                    padding: 5px;
+                }
+                QLabel {
+                    color: #C0CAF5;
+                }
+                QComboBox {
+                    background-color: #292E42;
+                    color: #C0CAF5;
+                    border: 1px solid #C0CAF5;
+                }
+                QProgressBar {
+                    background-color: #292E42;
+                    color: #C0CAF5;
+                    border: 1px solid #C0CAF5;
+                }
+                QProgressBar::chunk {
+                    background-color: #C0CAF5;
+                }
+                QMessageBox {
+                    background-color: #292E42;
+                    color: #C0CAF5;
+                }
+                QTabWidget::pane {
+                    border: 1px solid #C0CAF5;
+                    background-color: #292E42;
+                }
+                QTabWidget::tab-bar {
+                    left: 5px;
+                }
+                QTabBar::tab {
+                    background-color: #292E42;
+                    color: #C0CAF5;
+                    border: 1px solid #C0CAF5;
+                    padding: 5px;
+                    margin-right: 2px;
+                }
+                QTabBar::tab:selected, QTabBar::tab:hover {
+                    background-color: #C0CAF5;
+                    color: #292E42;
+                }
+            """)
+        elif theme == 'Dracula':
+            self.setStyleSheet("""
+    QWidget {
+        background-color: #282a36; /* Dracula background */
+        color: #f8f8f2; /* Dracula foreground */
+    }
+    QPushButton {
+        background-color: #44475a; /* Dracula current line */
+        color: #f8f8f2; /* Dracula foreground */
+        border: 1px solid #f8f8f2; /* Dracula foreground */
+        padding: 5px;
+    }
+    QPushButton:hover {
+        background-color: #f8f8f2; /* Dracula foreground */
+        color: #282a36; /* Dracula background */
+    }
+    QLineEdit {
+        background-color: #44475a; /* Dracula current line */
+        color: #f8f8f2; /* Dracula foreground */
+        border: 1px solid #f8f8f2; /* Dracula foreground */
+        padding: 5px;
+    }
+    QLabel {
+        color: #f8f8f2; /* Dracula foreground */
+    }
+    QComboBox {
+        background-color: #44475a; /* Dracula current line */
+        color: #f8f8f2; /* Dracula foreground */
+        border: 1px solid #f8f8f2; /* Dracula foreground */
+    }
+    QProgressBar {
+        background-color: #44475a; /* Dracula current line */
+        color: #f8f8f2; /* Dracula foreground */
+        border: 1px solid #f8f8f2; /* Dracula foreground */
+    }
+    QProgressBar::chunk {
+        background-color: #50fa7b; /* Dracula green */
+    }
+    QMessageBox {
+        background-color: #44475a; /* Dracula current line */
+        color: #f8f8f2; /* Dracula foreground */
+    }
+    QTabWidget::pane {
+        border: 1px solid #f8f8f2; /* Dracula foreground */
+        background-color: #44475a; /* Dracula current line */
+    }
+    QTabWidget::tab-bar {
+        left: 5px;
+    }
+    QTabBar::tab {
+        background-color: #44475a; /* Dracula current line */
+        color: #f8f8f2; /* Dracula foreground */
+        border: 1px solid #f8f8f2; /* Dracula foreground */
+        padding: 5px;
+        margin-right: 2px;
+    }
+    QTabBar::tab:selected, QTabBar::tab:hover {
+        background-color: #ff79c6; /* Dracula pink */
+        color: #282a36; /* Dracula background */
+    }
+""")
+
+        elif theme == 'Nord':
+            self.setStyleSheet("""
+    QWidget {
+        background-color: #2E3440; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+    }
+    QPushButton {
+        background-color: #3B4252; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+        border: 1px solid #D8DEE9; /* Nord Snow Storm */
+        padding: 5px;
+    }
+    QPushButton:hover {
+        background-color: #88C0D0; /* Nord Frost */
+        color: #2E3440; /* Nord Polar Night */
+    }
+    QLineEdit {
+        background-color: #3B4252; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+        border: 1px solid #D8DEE9; /* Nord Snow Storm */
+        padding: 5px;
+    }
+    QLabel {
+        color: #D8DEE9; /* Nord Snow Storm */
+    }
+    QComboBox {
+        background-color: #3B4252; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+        border: 1px solid #D8DEE9; /* Nord Snow Storm */
+    }
+    QProgressBar {
+        background-color: #3B4252; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+        border: 1px solid #D8DEE9; /* Nord Snow Storm */
+    }
+    QProgressBar::chunk {
+        background-color: #A3BE8C; /* Nord Aurora Green */
+    }
+    QMessageBox {
+        background-color: #3B4252; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+    }
+    QTabWidget::pane {
+        border: 1px solid #D8DEE9; /* Nord Snow Storm */
+        background-color: #3B4252; /* Nord Polar Night */
+    }
+    QTabWidget::tab-bar {
+        left: 5px;
+    }
+    QTabBar::tab {
+        background-color: #3B4252; /* Nord Polar Night */
+        color: #D8DEE9; /* Nord Snow Storm */
+        border: 1px solid #D8DEE9; /* Nord Snow Storm */
+        padding: 5px;
+        margin-right: 2px;
+    }
+    QTabBar::tab:selected, QTabBar::tab:hover {
+        background-color: #88C0D0; /* Nord Frost */
+        color: #2E3440; /* Nord Polar Night */
+    }
+""")
+        elif theme == 'Gruvbox':
+            self.setStyleSheet("""
+    QWidget {
+        background-color: #282828; /* Gruvbox background */
+        color: #EBDBB2; /* Gruvbox foreground */
+    }
+    QPushButton {
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+        color: #EBDBB2; /* Gruvbox foreground */
+        border: 1px solid #EBDBB2; /* Gruvbox foreground */
+        padding: 5px;
+    }
+    QPushButton:hover {
+        background-color: #D79921; /* Gruvbox yellow */
+        color: #282828; /* Gruvbox background */
+    }
+    QLineEdit {
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+        color: #EBDBB2; /* Gruvbox foreground */
+        border: 1px solid #EBDBB2; /* Gruvbox foreground */
+        padding: 5px;
+    }
+    QLabel {
+        color: #EBDBB2; /* Gruvbox foreground */
+    }
+    QComboBox {
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+        color: #EBDBB2; /* Gruvbox foreground */
+        border: 1px solid #EBDBB2; /* Gruvbox foreground */
+    }
+    QProgressBar {
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+        color: #EBDBB2; /* Gruvbox foreground */
+        border: 1px solid #EBDBB2; /* Gruvbox foreground */
+    }
+    QProgressBar::chunk {
+        background-color: #689D6A; /* Gruvbox aqua */
+    }
+    QMessageBox {
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+        color: #EBDBB2; /* Gruvbox foreground */
+    }
+    QTabWidget::pane {
+        border: 1px solid #EBDBB2; /* Gruvbox foreground */
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+    }
+    QTabWidget::tab-bar {
+        left: 5px;
+    }
+    QTabBar::tab {
+        background-color: #3C3836; /* Gruvbox slightly lighter background */
+        color: #EBDBB2; /* Gruvbox foreground */
+        border: 1px solid #EBDBB2; /* Gruvbox foreground */
+        padding: 5px;
+        margin-right: 2px;
+    }
+    QTabBar::tab:selected, QTabBar::tab:hover {
+        background-color: #D79921; /* Gruvbox yellow */
+        color: #282828; /* Gruvbox background */
+    }
+""")
+        elif theme == 'Solarized':
+            self.setStyleSheet("""
+    QWidget {
+        background-color: #002b36; /* Solarized background */
+        color: #839496; /* Solarized foreground */
+    }
+    QPushButton {
+        background-color: #073642; /* Solarized slightly lighter background */
+        color: #839496; /* Solarized foreground */
+        border: 1px solid #839496; /* Solarized foreground */
+        padding: 5px;
+    }
+    QPushButton:hover {
+        background-color: #268bd2; /* Solarized blue */
+        color: #002b36; /* Solarized background */
+    }
+    QLineEdit {
+        background-color: #073642; /* Solarized slightly lighter background */
+        color: #839496; /* Solarized foreground */
+        border: 1px solid #839496; /* Solarized foreground */
+        padding: 5px;
+    }
+    QLabel {
+        color: #839496; /* Solarized foreground */
+    }
+    QComboBox {
+        background-color: #073642; /* Solarized slightly lighter background */
+        color: #839496; /* Solarized foreground */
+        border: 1px solid #839496; /* Solarized foreground */
+    }
+    QProgressBar {
+        background-color: #073642; /* Solarized slightly lighter background */
+        color: #839496; /* Solarized foreground */
+        border: 1px solid #839496; /* Solarized foreground */
+    }
+    QProgressBar::chunk {
+        background-color: #859900; /* Solarized green */
+    }
+    QMessageBox {
+        background-color: #073642; /* Solarized slightly lighter background */
+        color: #839496; /* Solarized foreground */
+    }
+    QTabWidget::pane {
+        border: 1px solid #839496; /* Solarized foreground */
+        background-color: #073642; /* Solarized slightly lighter background */
+    }
+    QTabWidget::tab-bar {
+        left: 5px;
+    }
+    QTabBar::tab {
+        background-color: #073642; /* Solarized slightly lighter background */
+        color: #839496; /* Solarized foreground */
+        border: 1px solid #839496; /* Solarized foreground */
+        padding: 5px;
+        margin-right: 2px;
+    }
+    QTabBar::tab:selected, QTabBar::tab:hover {
+        background-color: #268bd2; /* Solarized blue */
+        color: #002b36; /* Solarized background */
+    }
+""")
+        elif theme == 'One Dark':
+            self.setStyleSheet("""
+    QWidget {
+        background-color: #000000; /* Pure black */
+        color: #ffffff; /* White for text */
+    }
+    QPushButton {
+        background-color: #1c1c1c; /* Slightly lighter black for buttons */
+        color: #ffffff; /* White text */
+        border: 1px solid #333333; /* Dark gray border */
+        padding: 5px;
+    }
+    QPushButton:hover {
+        background-color: #333333; /* Dark gray on hover */
+        color: #ffffff; /* White text */
+    }
+    QLineEdit {
+        background-color: #1c1c1c; /* Slightly lighter black */
+        color: #ffffff; /* White text */
+        border: 1px solid #333333; /* Dark gray border */
+        padding: 5px;
+    }
+    QLabel {
+        color: #ffffff; /* White text */
+    }
+    QComboBox {
+        background-color: #1c1c1c; /* Slightly lighter black */
+        color: #ffffff; /* White text */
+        border: 1px solid #333333; /* Dark gray border */
+    }
+    QProgressBar {
+        background-color: #1c1c1c; /* Slightly lighter black */
+        color: #ffffff; /* White text */
+        border: 1px solid #333333; /* Dark gray border */
+    }
+    QProgressBar::chunk {
+        background-color: #4caf50; /* Green for progress chunk */
+    }
+    QMessageBox {
+        background-color: #1c1c1c; /* Slightly lighter black */
+        color: #ffffff; /* White text */
+    }
+    QTabWidget::pane {
+        border: 1px solid #333333; /* Dark gray border */
+        background-color: #1c1c1c; /* Slightly lighter black */
+    }
+    QTabWidget::tab-bar {
+        left: 5px;
+    }
+    QTabBar::tab {
+        background-color: #1c1c1c; /* Slightly lighter black */
+        color: #ffffff; /* White text */
+        border: 1px solid #333333; /* Dark gray border */
+        padding: 5px;
+        margin-right: 2px;
+    }
+    QTabBar::tab:selected, QTabBar::tab:hover {
+        background-color: #333333; /* Dark gray */
+        color: #ffffff; /* White text */
+    }
+""")
+
+    def saveThemeSetting(self, theme):
+        with open(self.theme_file, 'w') as f:
+            f.write(theme)
+
+    def loadThemeSetting(self):
+        if os.path.exists(self.theme_file):
+            with open(self.theme_file, 'r') as f:
+                theme = f.read().strip()
+            self.applyTheme(theme)
+            return theme
+        else:
+            return 'Catppuccin Mocha Red'  # Default theme
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
