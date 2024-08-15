@@ -10,7 +10,7 @@
 
 - 🇷🇸 Ако имате проблема са нечим, можете отворите [**issue**](https://github.com/crnobog69/py-ffmpeg/issues). Ако знате како да решите проблем (или ако сте га решили), можете отворити **pull request**.
 
-- 🇬🇧 If you encounter any issues, you can open an [**issue**](https://github.com/crnobog69/py-ffmpeg/issues). If you know how to fix the problem (or have already fixed it), you can open a **pull request**.
+- 🇬🇧 If you encounter any issues, you can open an [**issue**](https://github.com/crnobog69/py-ffmpeg/issues). If you know how to fix the problem (or have already fixed it), you can open a **pull request**
 
 ## 3. 💖 Можете донирати | You can donate
 
