@@ -13,7 +13,7 @@
 > [!NOTE]
 > Допринос \\|/ Contributing
 > <br>
-> [Овде | Here](contribute.md)
+> [Овде | Here](contributing.md)
 
 
 > [!CAUTION]
