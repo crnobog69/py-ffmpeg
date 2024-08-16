@@ -2,9 +2,9 @@
 
 ## 1. 🌍 Превођење | Translating
 
-- 🇷🇸 Ако превод није тачан, можете **форковати** [PyFFmpeg](https://github.com/crnobog69/py-ffmpeg) 🐙, затим отићи у [translations/translation_files](translations/translation_files) 📁, изменити нетачан превод ✍️ и отворити **pull request** 📬.
+- 🇷🇸 Ако превод није тачан, можете **форковати** [PyFFmpeg](https://github.com/crnobog69/py-ffmpeg) 🐙, затим отићи у [translations/translation_files](translations/translation_files) 📁,или пратите кратк упуство - [make-translations.txt](translations/make-translations.txt), изменити нетачан превод ✍️ и отворити **pull request** 📬.
 
-- 🇬🇧 If the translation is incorrect, you can **fork** [PyFFmpeg](https://github.com/crnobog69/py-ffmpeg) 🐙, then go to [translations/translation_files](translations/translation_files) 📁, modify the incorrect translation ✍️, and open a **pull request** 📬.
+- 🇬🇧 If the translation is incorrect, you can **fork** [PyFFmpeg](https://github.com/crnobog69/py-ffmpeg) 🐙, then go to [translations/translation_files](translations/translation_files) 📁, or follow the short guide - [make-translations.txt](translations/make-translations.txt), modify the incorrect translation ✍️, and open a **pull request** 📬.
 
 ## 2. Тестирање и решавање проблема | Testing and Troubleshooting
 
